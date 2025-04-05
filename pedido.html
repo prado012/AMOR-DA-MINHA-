@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Namoro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      color: #4b2b39;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 52px;
+      color: #c2185b;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.9;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+    }
+
+    button {
+      margin: 20px;
+      padding: 18px 40px;
+      font-size: 22px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sim {
+      background: #ff69b4;
+      color: white;
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+    }
+
+    .sim:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.6);
+    }
+
+    .nao {
+      background: #ffe4e1;
+      color: #444;
+      border: 2px solid #ccc;
+    }
+
+    .nao:hover {
+      transform: scale(1.05);
+    }
+
+    #resposta {
+      margin-top: 50px;
+      display: none;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 35px;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #resposta h3 {
+      font-size: 34px;
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    #resposta p {
+      font-size: 22px;
+    }
+
+    /* Flores decorativas nas laterais */
+    .flores {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      background-image: url('https://i.imgur.com/kfQqVGP.png');
+      background-repeat: repeat-y;
+      background-size: contain;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    .flores.left {
+      left: 0;
+    }
+
+    .flores.right {
+      right: 0;
+      transform: scaleX(-1);
+    }
+
+    /* Corações suaves no fundo */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://i.imgur.com/yYj7Z6L.png') no-repeat center center / cover;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.2;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); }
+      100% { transform: translateY(-10vh) scale(1); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="flores left"></div>
+  <div class="flores right"></div>
+
+  <!-- Corações animados no fundo -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDelay = `${Math.random() * 10}s`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <h2>Quer namorar comigo? 💍</h2>
+
+  <p>Meu amor... minha princesa, minha vida.  
+  Desde que te conheci, tudo ficou mais leve, mais bonito, mais verdadeiro.  
+  Eu nunca imaginei que pudesse me apaixonar assim tão intensamente,  
+  mas você... você chegou e mudou tudo.  
+  Você é o motivo do meu sorriso, da minha paz e dos meus sonhos.  
+  Quero te fazer feliz, te respeitar, te cuidar e construir uma vida ao seu lado.  
+  Quero casar com você, ter filhos com você, envelhecer com você...  
+  Mas antes de tudo isso, eu preciso te perguntar algo muito especial:</p>
+
+  <button class="sim" onclick="aceitou()">💖 Sim, eu aceito!</button>
+  <button class="nao" onclick="alert('Eita... tenta de novo 😢')">Não 😢</button>
+
+  <div id="resposta">
+    <h3>Agora você está oficialmente em um relacionamento! 💘</h3>
+    <p>Você aceitou... e agora o meu coração está completo!  
+    Te amo infinitamente, e a partir de agora somos dois, juntos, contra o mundo! 💑  
+    Obrigado por ser minha. 💕</p>
+  </div>
+
+  <script>
+    function aceitou() {
+      document.getElementById('resposta').style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

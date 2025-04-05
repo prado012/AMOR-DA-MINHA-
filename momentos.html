@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossos Momentos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+      font-family: 'Quicksand', sans-serif;
+      color: #4b2b39;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 50px;
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 50px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .foto {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .foto img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .legenda {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #a0335e;
+      font-style: italic;
+    }
+
+    .botao {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .botao a {
+      text-decoration: none;
+      background-color: #d63384;
+      color: #fff;
+      padding: 14px 35px;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: 0.3s ease;
+    }
+
+    .botao a:hover {
+      background-color: #b1226c;
+    }
+
+    @media(max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .foto img {
+        max-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Nossos Momentos 💘</h1>
+
+    <div class="galeria">
+      <div class="foto">
+        <img src="https://media.discordapp.net/attachments/1220790293323055144/1358221307002621972/IMG-20250403-WA0010.jpg?ex=67f30daa&is=67f1bc2a&hm=17aaf2edc77413913c4ceacacf2fbbb3bd8fef498825fc60927dc2d125da3030&=&format=webp&width=486&height=648" alt="Foto 1">
+        <div class="legenda">"Te amar é fácil demais."</div>
+      </div>
+      <div class="foto">
+        <img src="https://media.discordapp.net/attachments/1220790293323055144/1358221239306420303/IMG-20250328-WA0062.jpg?ex=67f30d99&is=67f1bc19&hm=9b5d17546790fef9b8ccc3cd014fef88ea6ab188123378f8da951f2d9544d2c6&=&format=webp&width=306&height=544" alt="Foto 2">
+        <div class="legenda">"Cê é o amor da minha vida"</div>
+      </div>
+      <div class="foto">
+        <img src="https://media.discordapp.net/attachments/1220790293323055144/1358221239084253415/IMG-20250403-WA0007.jpg?ex=67f30d99&is=67f1bc19&hm=4162575c2f3279a377edfbfa129e068bafe5e9d147d4acdc3ac50dd459f89d78&=&format=webp&width=408&height=544" alt="Foto 3">
+        <div class="legenda">"Meu coração é todo seu."</div>
+      </div>
+      <div class="foto">
+        <img src="https://media.discordapp.net/attachments/1220790293323055144/1358221239549956177/IMG-20250328-WA0064.jpg?ex=67f30d9a&is=67f1bc1a&hm=bf5502069ddbfc59dcb30f618f1c5562daa886c8abcd1899b01b4eb5af3b4378&=&format=webp&width=306&height=544" alt="Foto 4">
+        <div class="legenda">"Você me ganhou no olhar."</div>
+      </div>
+    </div>
+
+    <div class="botao">
+      <a href="compromisso.html">Continuar para a próxima parte</a>
+    </div>
+  </div>
+
+</body>
+</html>
